@@ -1,2 +1,2 @@
 # Next---react
-ssr web
+turbopack + next + react + typescript + tailwindcss 
