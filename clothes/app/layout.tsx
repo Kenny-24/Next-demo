@@ -29,7 +29,7 @@ export default function RootLayout({
             <AddressBar />
 
             <div className="rounded-xl border border-zinc-200 bg-black p-8">
-              22{children}
+              {children}
             </div>
           </div>
 

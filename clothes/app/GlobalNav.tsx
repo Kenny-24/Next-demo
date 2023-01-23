@@ -59,6 +59,12 @@ export default function GlobalNav() {
         >
           View
         </Link>
+        <Link
+          href="/todos"
+          className="bg-pink-500 flex justify-center text-blue-100 rounded-lg w-20 py-1"
+        >
+          Todos
+        </Link>
       </header>
     </div>
   );
