@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Page() {
   return (
     <div className="space-y-6">
-      <div className="space-y-8 text-white">
+      {/* <div className="space-y-8 text-white">
         {demos
           .filter((section) =>
             section.items.some((x) => typeof x.isDisabled === 'undefined'),
@@ -40,6 +40,9 @@ export default function Page() {
               </div>
             );
           })}
+      </div> */}
+      <div className="text-purple-400 text-center pt-20 text-3xl">
+        Nice coding!
       </div>
     </div>
   );

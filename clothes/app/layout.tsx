@@ -1,3 +1,4 @@
+// 布局
 import '@/styles/globals.css';
 import React from 'react';
 import AddressBar from '@/ui/AddressBar';
@@ -14,7 +15,11 @@ export default function RootLayout({
         <title>Next.js Turbopack App Directory Playground</title>
       </head>
       <body className="overflow-y-scroll bg-zinc-900">
-        <div className="grid grid-cols-[1fr,minmax(auto,240px),min(800px,100%),1fr] gap-x-8 py-8">
+        <div className="pt-20 text-6xl text-center text-purple-700">
+          Hello World!
+        </div>
+        <div>{children}</div>
+        {/* <div className="grid grid-cols-[1fr,minmax(auto,240px),min(800px,100%),1fr] gap-x-8 py-8">
           <div className="col-start-2">
             <GlobalNav />
           </div>
@@ -22,8 +27,8 @@ export default function RootLayout({
           <div className="col-start-3 space-y-6">
             <AddressBar />
 
-            <div className="rounded-xl border border-zinc-800 bg-black p-8">
-              {children}
+            <div className="rounded-xl border border-zinc-200 bg-black p-8">
+              22{children}
             </div>
           </div>
 
@@ -51,7 +56,7 @@ export default function RootLayout({
               {'.'}
             </div>
           </div>
-        </div>
+        </div> */}
       </body>
     </html>
   );
