@@ -6,11 +6,11 @@ import { useSelectedLayoutSegments } from 'next/navigation';
 import Link from 'next/link';
 
 export default function GlobalNav() {
-  const [selectedLayoutSegments] = useSelectedLayoutSegments();
+  // const [selectedLayoutSegments] = useSelectedLayoutSegments();
 
   return (
     <div className="space-y-5">
-      {demos.map((demo) => {
+      {/* {demos.map((demo) => {
         return (
           <div key={demo.name}>
             <div className="mb-2 px-3 text-xs font-semibold uppercase tracking-wider text-zinc-500">
@@ -45,7 +45,21 @@ export default function GlobalNav() {
             })}
           </div>
         );
-      })}
+      })} */}
+      <header className="p-10 flex flex-wrap justify-evenly bg-indigo-800">
+        <Link
+          href="/"
+          className="bg-pink-500 flex justify-center text-blue-100 rounded-lg w-20 py-1"
+        >
+          Home
+        </Link>
+        <Link
+          href="/kun"
+          className="bg-pink-500 flex justify-center text-blue-100 rounded-lg w-20 py-1"
+        >
+          View
+        </Link>
+      </header>
     </div>
   );
 }
