@@ -1,4 +1,8 @@
 import { Todo } from 'typings';
+import { notFound } from 'next/navigation';
+
+// 默认服务端渲染
+export const dynamicParams = true;
 
 type PageProps = {
   params: {
@@ -16,6 +20,10 @@ const fetchTodos = async (todoId: string) => {
 };
 export default async function TodoPge({ params: { todoId } }: PageProps) {
   const todo = await fetchTodos(todoId);
+  if (!todo.id) {
+    return notFound();
+  }
+
   return (
     <div className="bg-yellow-100 text-purple-400 text-center m-10 p-10 text-xl ">
       <p>
