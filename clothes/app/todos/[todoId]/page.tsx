@@ -37,7 +37,7 @@ export default async function TodoPge({ params: { todoId } }: PageProps) {
   );
 }
 
-export async function getStaticPaths() {
+export async function generateStaticParams() {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos/');
   const todos: Todo[] = await res.json();
   const trimmedTodos = todos.splice(0, 10);
