@@ -14,7 +14,7 @@ export default function RootLayout({
       <head>
         <title>CodingTalk</title>
       </head>
-      <body className="overflow-y-scroll bg-zinc-900">
+      <body className="overflow-y-scroll bg-zinc-200">
         <GlobalNav />
         <div>{children}</div>
       </body>

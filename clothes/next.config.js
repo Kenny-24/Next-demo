@@ -7,7 +7,7 @@ const nextConfig = {
   },
 
   images: {
-    domains: ['img1.baidu.com', 'img2.baidu.com', 'img0.baidu.com'],
+    domains: ['res.gucci.cn'],
   },
 };
 

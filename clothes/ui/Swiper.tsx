@@ -16,17 +16,19 @@ export default function Swipers() {
   return (
     <Swiper
       className="mt-2 h-96"
-      // 使用分页器模块
-      modules={[Pagination]}
-      spaceBetween={0}
-      slidesPerView={1}
+      // install Swiper modules
+      modules={[Navigation, Pagination, A11y]}
+      spaceBetween={50}
+      //   slidesPerView={3}
+      //   navigation
       pagination={{ clickable: true }}
-      onSlideChange={() => console.log('slide change')}
+      scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
     >
       {swipePicture.map((value, index) => {
         return (
-          <SwiperSlide className=" relative " key={index}>
+          <SwiperSlide key={index}>
             <Image
               style={{ objectFit: 'fill' }}
               fill

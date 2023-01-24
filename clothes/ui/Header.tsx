@@ -34,7 +34,7 @@ export default function Header(props: Props) {
       <React.Fragment>
         <CssBaseline />
         <HideOnScroll {...props}>
-          <AppBar className="bg-zinc-700 ">
+          <AppBar className="bg-transparent bg-gradient-to-b from-zinc-800 to-transparent ">
             <Toolbar>
               <Logo />
               <Typography
@@ -48,7 +48,6 @@ export default function Header(props: Props) {
             </Toolbar>
           </AppBar>
         </HideOnScroll>
-        <Toolbar />
       </React.Fragment>
     </div>
   );
