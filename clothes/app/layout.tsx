@@ -15,9 +15,7 @@ export default function RootLayout({
       </head>
       <body className="overflow-y-scroll bg-zinc-900">
         <GlobalNav />
-        <div className="pt-20 text-6xl text-center text-purple-700">
-          Hello World!
-        </div>
+        <div className="text-6xl text-center text-purple-700">Hello World!</div>
         <div>{children}</div>
       </body>
     </html>

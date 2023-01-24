@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Page() {
   return (
     <div className="space-y-6">
-      <div className="text-purple-400 text-center pt-20 text-3xl">
+      <div className="text-purple-400 text-center pt-10 text-3xl">
         Nice coding!
       </div>
       <Image

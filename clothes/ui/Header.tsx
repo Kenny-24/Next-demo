@@ -7,6 +7,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import React from 'react';
 import Logo from './Logo';
+import { CssBaseline, Container, Box } from '@mui/material';
 interface Props {
   window?: () => Window;
   children: React.ReactElement;
@@ -28,16 +29,38 @@ function HideOnScroll(props: Props) {
 }
 export default function Header(props: Props) {
   return (
-    <HideOnScroll {...props}>
-      <AppBar className="bg-transparent">
-        <Toolbar>
-          <Logo />
-          <Typography variant="h6" component="div">
-            CodingTalk
-          </Typography>
-          {props.children}
-        </Toolbar>
-      </AppBar>
-    </HideOnScroll>
+    <div>
+      <React.Fragment>
+        <CssBaseline />
+        <HideOnScroll {...props}>
+          <AppBar className="bg-zinc-700">
+            <Toolbar>
+              <Logo />
+              <Typography
+                variant="h6"
+                component="div"
+                className="text-blue-200"
+              >
+                CodingTalk
+              </Typography>
+              {props.children}
+            </Toolbar>
+          </AppBar>
+        </HideOnScroll>
+        <Toolbar />
+        <Container className="text-blue-200">
+          <Box sx={{ my: 9 }}>
+            {[...new Array(12)]
+              .map(
+                () => `Cras mattis consectetur purus sit amet fermentum.
+Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
+              )
+              .join('\n')}
+          </Box>
+        </Container>
+      </React.Fragment>
+    </div>
   );
 }
