@@ -7,7 +7,6 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import React from 'react';
 import Logo from './Logo';
-
 interface Props {
   window?: () => Window;
   children: React.ReactElement;
@@ -30,11 +29,11 @@ function HideOnScroll(props: Props) {
 export default function Header(props: Props) {
   return (
     <HideOnScroll {...props}>
-      <AppBar>
+      <AppBar className="bg-transparent">
         <Toolbar>
           <Logo />
           <Typography variant="h6" component="div">
-            Scroll to hide App bar
+            CodingTalk
           </Typography>
           {props.children}
         </Toolbar>
