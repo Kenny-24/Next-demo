@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import React from 'react';
-import Logo from './Logo';
 import { CssBaseline, Container, Box } from '@mui/material';
 
 interface Props {
@@ -31,12 +30,11 @@ function HideOnScroll(props: Props) {
 export default function Header(props: Props) {
   return (
     <div>
-      <React.Fragment>
+      <>
         <CssBaseline />
         <HideOnScroll {...props}>
           <AppBar className="bg-transparent bg-gradient-to-b from-zinc-800 to-transparent ">
             <Toolbar>
-              <Logo />
               <Typography
                 variant="h4"
                 component="div"
@@ -48,7 +46,8 @@ export default function Header(props: Props) {
             </Toolbar>
           </AppBar>
         </HideOnScroll>
-      </React.Fragment>
+        <Toolbar />
+      </>
     </div>
   );
 }
