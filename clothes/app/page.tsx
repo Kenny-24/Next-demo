@@ -1,5 +1,7 @@
 import { demos } from '@/lib/demos';
 import Link from 'next/link';
+import Image from 'next/image';
+import imageyu from '../public/yu.jpeg';
 
 export default function Page() {
   return (
@@ -44,6 +46,15 @@ export default function Page() {
       <div className="text-purple-400 text-center pt-20 text-3xl">
         Nice coding!
       </div>
+      <Image
+        className="mx-auto"
+        alt="yu"
+        src={imageyu}
+        placeholder="blur"
+        blurDataURL="data:..."
+        width={100}
+        height={100}
+      ></Image>
     </div>
   );
 }
