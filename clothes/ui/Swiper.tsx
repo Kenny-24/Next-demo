@@ -15,14 +15,15 @@ import { swipePicture } from '@/lib/swipePicture';
 export default function Swipers() {
   return (
     <Swiper
-      className="mt-2 h-96"
+      style={{ height: '500px' }}
+      className="mt-2"
       // install Swiper modules
       modules={[Navigation, Pagination, A11y]}
       spaceBetween={50}
       //   slidesPerView={3}
-      //   navigation
+      navigation
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+      //   scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >

@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.swiper{
+    --swiper-theme-color: #343434d7;/* 设置Swiper风格 */
+    --swiper-navigation-color: #959595bc;/* 单独设置按钮颜色 */
+    --swiper-navigation-size: 40px;/* 设置按钮大小 默认是44px */
+  }
