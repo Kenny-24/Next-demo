@@ -8,6 +8,7 @@ import Slide from '@mui/material/Slide';
 import React from 'react';
 import Logo from './Logo';
 import { CssBaseline, Container, Box } from '@mui/material';
+
 interface Props {
   window?: () => Window;
   children: React.ReactElement;
@@ -48,18 +49,6 @@ export default function Header(props: Props) {
           </AppBar>
         </HideOnScroll>
         <Toolbar />
-        <Container className="text-blue-200">
-          <Box sx={{ my: 9 }}>
-            {[...new Array(12)]
-              .map(
-                () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-              )
-              .join('\n')}
-          </Box>
-        </Container>
       </React.Fragment>
     </div>
   );

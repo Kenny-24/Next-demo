@@ -2,6 +2,7 @@
 import '@/styles/globals.css';
 import React from 'react';
 import GlobalNav from './GlobalNav';
+import 'swiper/css';
 
 export default function RootLayout({
   children,
@@ -15,7 +16,6 @@ export default function RootLayout({
       </head>
       <body className="overflow-y-scroll bg-zinc-900">
         <GlobalNav />
-        <div className="text-6xl text-center text-purple-700">Hello World!</div>
         <div>{children}</div>
       </body>
     </html>

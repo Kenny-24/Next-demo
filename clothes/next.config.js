@@ -5,6 +5,10 @@ const nextConfig = {
     // Required:
     appDir: true,
   },
+
+  images: {
+    domains: ['img1.baidu.com', 'img2.baidu.com', 'img0.baidu.com'],
+  },
 };
 
 module.exports = nextConfig;
