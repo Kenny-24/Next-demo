@@ -9,7 +9,7 @@ export default function Page() {
         Nice coding!
       </div>
       <Image
-        className="mx-auto"
+        className="mx-auto pb-10"
         src="/yu.png"
         unoptimized
         alt="Next.js Hoodie"

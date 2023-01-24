@@ -33,11 +33,11 @@ export default function Header(props: Props) {
       <React.Fragment>
         <CssBaseline />
         <HideOnScroll {...props}>
-          <AppBar className="bg-zinc-700">
+          <AppBar className="bg-zinc-700 ">
             <Toolbar>
               <Logo />
               <Typography
-                variant="h6"
+                variant="h4"
                 component="div"
                 className="text-blue-200"
               >
