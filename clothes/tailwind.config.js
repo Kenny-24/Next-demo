@@ -6,6 +6,9 @@ module.exports = {
     './ui/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    boxShadow: {
+      '3xl': '0 5px 90px 15px rgba(0, 0, 0, 0.4)',
+    },
     extend: {
       // https://vercel.com/design/color
       colors: {

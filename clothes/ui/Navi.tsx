@@ -18,10 +18,12 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
+import SearchBtn from './Search';
 interface Props {
   window?: () => Window;
   children: React.ReactElement;
 }
+
 function HideOnScroll(props: Props) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -84,6 +86,10 @@ export default function Navi(props: Props) {
               >
                 {props.children}
               </Box>
+              <Box sx={{ mr: 3, flexGrow: 0 }}>
+                <SearchBtn />
+              </Box>
+
               <Box sx={{ flexGrow: 0 }}>
                 <Tooltip title="设置">
                   <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

@@ -3,7 +3,8 @@ import { Todo } from 'typings';
 const fetchTodos = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos/');
   const todos: Todo[] = await res.json();
-  return todos;
+  const newTodo = todos.splice(0, 10);
+  return newTodo;
 };
 
 export default async function TodosList() {

@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // import Swiper core and required modules
-import { Navigation, Pagination, A11y } from 'swiper';
+import { Autoplay, Navigation, Pagination, A11y } from 'swiper';
 import SwiperCore from 'swiper';
 import { Box } from '@mui/material';
 import { swipePicture } from '@/lib/swipePicture';
@@ -29,15 +29,29 @@ export default function Swipers() {
         </p>
 
         <Swiper
-          modules={[Navigation, Pagination, A11y]}
-          navigation={true}
+          className="rounded-3xl shadow-3xl"
+          spaceBetween={50}
+          speed={1000}
+          freeMode={true}
+          loop={true}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay, Navigation, Pagination, A11y]}
           pagination={{ clickable: true }}
         >
           {/** Slides */}
           {swipePicture.map((value, index) => {
             return (
               <SwiperSlide style={{ aspectRatio: '2.8/1' }} key={index}>
-                <Image fill quality={100} src={value.value} alt={''} />
+                <Image
+                  className="rounded-3xl"
+                  fill
+                  quality={100}
+                  src={value.value}
+                  alt={''}
+                />
               </SwiperSlide>
             );
           })}
