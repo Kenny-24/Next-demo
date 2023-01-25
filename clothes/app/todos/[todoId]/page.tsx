@@ -37,6 +37,7 @@ export default async function TodoPge({ params: { todoId } }: PageProps) {
   );
 }
 
+// 预渲染
 export async function generateStaticParams() {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos/');
   const todos: Todo[] = await res.json();
@@ -49,5 +50,3 @@ export async function generateStaticParams() {
     todoId: todo.id.toString(),
   }));
 }
-
-// getStaticProps相关知识 https://www.jianshu.com/p/7e93c5dc1403
