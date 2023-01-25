@@ -75,12 +75,15 @@ export default function Navi(props: Props) {
               >
                 CodingTalk
               </Typography>
-              {props.children}
+
               <Box
                 sx={{
                   flexGrow: 1,
+                  display: { xs: 'none', md: 'flex' },
                 }}
-              ></Box>
+              >
+                {props.children}
+              </Box>
               <Box sx={{ flexGrow: 0 }}>
                 <Tooltip title="设置">
                   <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -113,7 +116,7 @@ export default function Navi(props: Props) {
             </Toolbar>
           </AppBar>
         </HideOnScroll>
-        <Toolbar />
+        <Toolbar className="mb-10" />
       </>
     </div>
   );

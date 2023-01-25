@@ -12,7 +12,7 @@ export default async function TodosList() {
   return (
     <>
       {todos.map((todo) => (
-        <p key={todo.id} className="text-purple-400 text-center pt-10 text-3xl">
+        <p key={todo.id} className="text-purple-400 text-center text-3xl">
           <Link href={`/todos/${todo.id}`}>Todo: {todo.id}</Link>
         </p>
       ))}

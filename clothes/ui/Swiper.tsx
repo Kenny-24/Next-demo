@@ -1,32 +1,4 @@
 'use client';
-// // import Swiper core and required modules
-//
-
-// import { Swiper, SwiperSlide } from 'swiper/react';
-
-// // Import Swiper styles
-// import 'swiper/css';
-
-// import 'swiper/css/scrollbar';
-//
-// export default function Swipers() {
-//   return (
-//     <Swiper
-//       className="mt-2"
-//       // install Swiper modules
-//       modules={[Navigation, Pagination, A11y]}
-//       spaceBetween={50}
-//       //   slidesPerView={3}
-//       navigation
-//       pagination={{ clickable: true }}
-//       //   scrollbar={{ draggable: true }}
-//       onSwiper={(swiper) => console.log(swiper)}
-//       onSlideChange={() => console.log('slide change')}
-//     >
-
-//     </Swiper>
-//   );
-// }
 
 import React from 'react';
 
@@ -64,7 +36,7 @@ export default function Swipers() {
           {/** Slides */}
           {swipePicture.map((value, index) => {
             return (
-              <SwiperSlide style={{ aspectRatio: '3/1' }} key={index}>
+              <SwiperSlide style={{ aspectRatio: '2.8/1' }} key={index}>
                 <Image fill quality={100} src={value.value} alt={''} />
               </SwiperSlide>
             );

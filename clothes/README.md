@@ -2,7 +2,7 @@
 
 # turbopack + pnpm + next + react + typescript + tailwindcss
 # Next 13.1 
-### Streaming：显示即时加载状态并流式传输更新
+### Streaming：显示即时加载状态并流式传输更新，不会阻碍UI渲染
 ### 客户端渲染
 ### 服务端渲染
 
