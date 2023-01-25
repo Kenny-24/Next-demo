@@ -7,7 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <div>
-      <div className="flex space-x-2">
+      <div className="flex justify-center space-x-10">
         {/* @ts-ignore */}
         <TodosList />
       </div>
