@@ -2,8 +2,8 @@
 import '@/styles/globals.css';
 import React from 'react';
 import GlobalNav from './GlobalNav';
-import 'swiper/css';
 import Fabs from '@/ui/Fab';
+
 export default function RootLayout({
   children,
 }: {
@@ -17,7 +17,6 @@ export default function RootLayout({
       <body className="overflow-y-scroll bg-zinc-200">
         <GlobalNav />
         <div>{children}</div>
-        <Fabs />
       </body>
     </html>
   );

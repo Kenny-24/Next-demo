@@ -1,8 +1,8 @@
 'use client';
 
-import Header from '@/ui/Header';
+import Navi from '@/ui/Navi';
 import Links from '@/ui/Link';
 
 export default function GlobalNav() {
-  return <Header children={<Links />} />;
+  return <Navi children={<Links />} />;
 }

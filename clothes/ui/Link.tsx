@@ -1,26 +1,29 @@
+import { Button } from '@mui/material';
 import Link from 'next/link';
-
 export default function Links() {
   return (
-    <header className="space-x-5 p-5 flex">
-      <Link
-        href="/"
-        className="bg-pink-800 flex justify-center text-blue-100 rounded-lg w-20 py-1"
-      >
-        Home
+    <div className="space-x-5 p-5 flex">
+      <Link href="/">
+        <Button className=" flex justify-center text-blue-100 rounded-lg w-20 h-full py-1">
+          Home
+        </Button>
       </Link>
       <Link
         href="/kun"
-        className="bg-pink-800 flex justify-center text-blue-100 rounded-lg w-20 py-1"
+        className="flex justify-center text-blue-100 rounded-lg w-20 py-1"
       >
-        View
+        <Button className=" flex justify-center text-blue-100 rounded-lg w-20 h-full py-1">
+          View
+        </Button>
       </Link>
       <Link
         href="/todos"
-        className="bg-pink-800 flex justify-center text-blue-100 rounded-lg w-20 py-1"
+        className=" flex justify-center text-blue-100 rounded-lg w-20 py-1"
       >
-        Todos
+        <Button className=" flex justify-center text-blue-100 rounded-lg w-20 h-full py-1">
+          Todos
+        </Button>
       </Link>
-    </header>
+    </div>
   );
 }
