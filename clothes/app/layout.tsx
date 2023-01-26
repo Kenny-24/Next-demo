@@ -16,6 +16,7 @@ export default function RootLayout({
       </head>
       <body className="overflow-y-scroll bg-zinc-200">
         <GlobalNav />
+
         <div>{children}</div>
       </body>
     </html>
