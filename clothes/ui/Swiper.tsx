@@ -7,11 +7,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/swiper.min.css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
+import 'swiper/css/scrollbar';
 // import Swiper core and required modules
-import { Autoplay, Navigation, Pagination, A11y } from 'swiper';
+import { Autoplay, Navigation, Scrollbar, FreeMode, A11y } from 'swiper';
 import SwiperCore from 'swiper';
 import { Box } from '@mui/material';
 import { swipePicture } from '@/lib/swipePicture';
@@ -24,27 +22,18 @@ export default function Swipers() {
     <Box>
       {/** Slider main container */}
       <Box>
-        <p className="select-none top-40 w-screen text-center text-8xl uppercase font-[700] bg-gradient-to-r from-[rgba(126,213,111,0.2)] to-[rgba(40,180,131,1)] inline-block bg-clip-text text-transparent  absolute z-50 ">
-          Gucci
-        </p>
-
         <Swiper
-          className="rounded-3xl shadow-3xl"
-          spaceBetween={50}
-          speed={1000}
+          className="rounded-3xl"
+          modules={[FreeMode, Autoplay, Scrollbar, A11y]}
+          spaceBetween={30}
+          slidesPerView={4}
+          scrollbar
           freeMode={true}
-          loop={true}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-          }}
-          modules={[Autoplay, Navigation, Pagination, A11y]}
-          pagination={{ clickable: true }}
         >
           {/** Slides */}
           {swipePicture.map((value, index) => {
             return (
-              <SwiperSlide style={{ aspectRatio: '2.8/1' }} key={index}>
+              <SwiperSlide style={{ aspectRatio: '.8/1' }} key={index}>
                 <Image
                   className="rounded-3xl"
                   fill
