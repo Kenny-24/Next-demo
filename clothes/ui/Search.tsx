@@ -1,8 +1,13 @@
+'use client';
 import SearchIcon from '@mui/icons-material/Search';
+import ClearlIcon from '@mui/icons-material/Clear';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
+import IconButton from '@mui/material/IconButton';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
+import { useRouter } from 'next/navigation';
 
-const Search = styled('div')(({ theme }) => ({
+const Search = styled('form')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.45),
@@ -38,21 +43,49 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     [theme.breakpoints.up('sm')]: {
       width: '12ch',
       '&:focus': {
-        width: '20ch',
+        width: '40ch',
       },
     },
   },
 }));
+// 问题：搜索后路由跳转很慢
 export default function SearchBtn() {
+  const router = useRouter();
+  const [search, setSearch] = useState('');
+  const handleSearch = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    router.push(`/search/${search}`);
+    setSearch('');
+    // alert('222');
+  };
+
   return (
-    <Search>
+    <Search onSubmit={handleSearch}>
       <SearchIconWrapper>
         <SearchIcon />
       </SearchIconWrapper>
       <StyledInputBase
         placeholder="Search…"
+        value={search}
         inputProps={{ 'aria-label': 'search' }}
+        onChange={(e: ChangeEvent<HTMLInputElement>) => {
+          setSearch(e.target.value);
+        }}
+        // onKeyDown={handleSearch} // 每摁一次键盘执行
       />
+
+      {search && (
+        <IconButton
+          type="button"
+          onClick={() => {
+            setSearch('');
+          }}
+          sx={{ position: 'absolute', right: '2px', opacity: 0.6 }}
+          aria-label="clear"
+        >
+          <ClearlIcon />
+        </IconButton>
+      )}
     </Search>
   );
 }

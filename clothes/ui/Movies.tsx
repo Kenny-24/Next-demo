@@ -6,13 +6,13 @@ export default async function Movies() {
   const res = await data.json();
   const imgPath = 'https://image.tmdb.org/t/p/original';
   return (
-    <main className="flex flex-wrap">
+    <main className="grid gap-16 grid-cols-fluid ">
       {res.results.map((movie: any) => (
         <Image
           key={movie.id}
           className=" rounded-3xl"
           width={400}
-          height={400}
+          height={200}
           quality={100}
           src={imgPath + movie.poster_path}
           alt={''}

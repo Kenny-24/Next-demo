@@ -6,14 +6,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
-      <div className="flex justify-center space-x-10">
-        {/* @ts-ignore */}
-        <TodosList />
-      </div>
-      {/* Suspense为啥不管用 */}
+    <div className="flex">
       <Suspense fallback={<p className="text-red-500">Loading...</p>}>
-        <div>{children}</div>
+        <div className="flex-1 space-x-10">
+          {/* @ts-ignore */}
+          <TodosList />
+        </div>
+        {/* Suspense为啥不管用 */}
+        <div className="flex-1 space-x-10">{children}</div>
       </Suspense>
     </div>
   );

@@ -1,5 +1,4 @@
 'use client';
-import { Home } from '@mui/icons-material';
 import { Button } from '@mui/material';
 import Link from 'next/link';
 const naviList = [
@@ -11,13 +10,15 @@ const naviList = [
 export default function Links() {
   return (
     <>
-      {naviList.map((item) => (
-        <Link key={item.name} href={item.link}>
-          <Button sx={{ my: 2, color: 'white', display: 'block' }}>
-            {item.name}
-          </Button>
-        </Link>
-      ))}
+      <div className="flex">
+        {naviList.map((item) => (
+          <Link key={item.name} href={item.link}>
+            <Button sx={{ my: 2, color: 'white', display: 'block' }}>
+              {item.name}
+            </Button>
+          </Link>
+        ))}
+      </div>
     </>
   );
 }
