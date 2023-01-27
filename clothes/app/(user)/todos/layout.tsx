@@ -7,14 +7,14 @@ export default function RootLayout({
 }) {
   return (
     <div className="flex">
-      <Suspense fallback={<p className="text-red-500">Loading...</p>}>
-        <div className="flex-1 space-x-10">
+      <div className="flex-1 space-x-10">
+        <Suspense fallback={<p className="text-red-500">Loading...</p>}>
           {/* @ts-ignore */}
           <TodosList />
-        </div>
-        {/* Suspense为啥不管用 */}
-        <div className="flex-1 space-x-10">{children}</div>
-      </Suspense>
+        </Suspense>
+      </div>
+      {/* Suspense为啥不管用 */}
+      <div className="flex-1 space-x-10">{children}</div>
     </div>
   );
 }
