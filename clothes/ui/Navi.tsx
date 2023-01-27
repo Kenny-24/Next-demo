@@ -40,6 +40,7 @@ function HideOnScroll(props: Props) {
 
   return (
     <Slide appear={false} direction="down" in={!trigger}>
+      {/* @ts-ignore */}
       {children}
     </Slide>
   );
@@ -47,7 +48,7 @@ function HideOnScroll(props: Props) {
 
 const settings = ['个人简介', '账户', '主页', '退出'];
 const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
-  color: theme.palette.getContrastText(purple[500]),
+  color: 'white',
   backgroundColor: 'transparent',
   '&:hover': {
     backgroundColor: '#ea80fc',
@@ -92,6 +93,7 @@ export default function Navi(props: Props) {
 
               <Box
                 sx={{
+                  color: 'pink',
                   flexGrow: 1,
                   display: { xs: 'none', md: 'flex' },
                 }}
@@ -100,11 +102,12 @@ export default function Navi(props: Props) {
                   <Link
                     sx={{
                       textDecoration: 'none',
+                      color: 'inherit',
                     }}
                     key={item.name}
                     href={item.link}
                   >
-                    <ColorButton>{item.name}</ColorButton>
+                    <Button color="inherit">{item.name}</Button>
                   </Link>
                 ))}
                 {/* {props.children} */}

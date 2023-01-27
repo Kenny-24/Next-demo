@@ -54,7 +54,7 @@ export default function SearchBtn() {
   const [search, setSearch] = useState('');
   const handleSearch = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    router.push(`/search/${search}`);
+    search && router.push(`/search/${search}`);
     setSearch('');
     // alert('222');
   };
