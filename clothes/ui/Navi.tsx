@@ -13,12 +13,15 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
+import Button, { ButtonProps } from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
 import { naviList } from '@/lib/swipePicture';
+
+import { styled } from '@mui/material/styles';
+import { purple } from '@mui/material/colors';
 
 import SearchBtn from './Search';
 interface Props {
@@ -43,7 +46,13 @@ function HideOnScroll(props: Props) {
 }
 
 const settings = ['个人简介', '账户', '主页', '退出'];
-
+const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
+  color: theme.palette.getContrastText(purple[500]),
+  backgroundColor: 'transparent',
+  '&:hover': {
+    backgroundColor: '#ea80fc',
+  },
+}));
 export default function Navi(props: Props) {
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null,
@@ -95,7 +104,7 @@ export default function Navi(props: Props) {
                     key={item.name}
                     href={item.link}
                   >
-                    <Button className="text-pink-200">{item.name}</Button>
+                    <ColorButton>{item.name}</ColorButton>
                   </Link>
                 ))}
                 {/* {props.children} */}
