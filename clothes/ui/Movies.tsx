@@ -1,21 +1,19 @@
-import Image from 'next/image';
+import MovieCard from './MovieCard';
 export default async function Movies() {
   const data = await fetch(
     `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.MOVIE_API_KEY}`,
+    { next: { revalidate: 1000 } },
   );
   const res = await data.json();
-  const imgPath = 'https://image.tmdb.org/t/p/original';
   return (
     <main className="grid gap-16 grid-cols-fluid ">
       {res.results.map((movie: any) => (
-        <Image
+        <MovieCard
           key={movie.id}
-          className=" rounded-3xl"
-          width={400}
-          height={200}
-          quality={100}
-          src={imgPath + movie.poster_path}
-          alt={''}
+          id={movie.id}
+          title={movie.title}
+          poster_path={movie.poster_path}
+          release_date={movie.release_date}
         />
       ))}
     </main>

@@ -65,6 +65,7 @@ export default function Navi(props: Props) {
                 variant="h4"
                 noWrap
                 component="div"
+                className="select-none"
                 sx={{
                   mr: 2,
                   display: { xs: 'none', md: 'flex' },
@@ -112,11 +113,9 @@ export default function Navi(props: Props) {
                   open={Boolean(anchorElUser)}
                   onClose={handleCloseUserMenu}
                 >
-                  {settings.map((setting) => (
-                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                      <Typography textAlign="center">{setting}</Typography>
-                    </MenuItem>
-                  ))}
+                  <MenuItem onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center">设置</Typography>
+                  </MenuItem>
                 </Menu>
               </Box>
             </Toolbar>

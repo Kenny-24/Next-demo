@@ -21,7 +21,7 @@ export default function Swipers() {
       {/** Slider main container */}
       <Box>
         <Swiper
-          className="rounded-3xl"
+          className="rounded-3xl my-10"
           modules={[Mousewheel, FreeMode, Autoplay, Scrollbar, A11y]} // install Swiper modules
           spaceBetween={30}
           slidesPerView={4}
@@ -32,9 +32,9 @@ export default function Swipers() {
           }}
         >
           {/** Slides */}
-          {swipePicture.map((value, index) => {
+          {swipePicture?.map((value) => {
             return (
-              <SwiperSlide style={{ aspectRatio: '.8/1' }} key={index}>
+              <SwiperSlide style={{ aspectRatio: '1/1' }} key={value.id}>
                 <Image
                   className="rounded-3xl"
                   fill
