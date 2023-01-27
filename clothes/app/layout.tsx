@@ -3,7 +3,6 @@ import '@/styles/globals.css';
 import React from 'react';
 import GlobalNav from './GlobalNav';
 import { Suspense } from 'react';
-import Fabs from '@/ui/Fab';
 
 export default function RootLayout({
   children,

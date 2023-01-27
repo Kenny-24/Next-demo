@@ -6,24 +6,17 @@ import Typography from '@mui/material/Typography';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import React from 'react';
-import { CssBaseline, Box, Link } from '@mui/material';
+import { CssBaseline, Box } from '@mui/material';
 
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button, { ButtonProps } from '@mui/material/Button';
+import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-
-import { naviList } from '@/lib/swipePicture';
-
-import { styled } from '@mui/material/styles';
-import { purple } from '@mui/material/colors';
 
 import SearchBtn from './Search';
+import TabNav from './Tabs';
 interface Props {
   window?: () => Window;
   children?: React.ReactElement;
@@ -47,13 +40,7 @@ function HideOnScroll(props: Props) {
 }
 
 const settings = ['个人简介', '账户', '主页', '退出'];
-const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
-  color: 'white',
-  backgroundColor: 'transparent',
-  '&:hover': {
-    backgroundColor: '#ea80fc',
-  },
-}));
+
 export default function Navi(props: Props) {
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null,
@@ -98,18 +85,8 @@ export default function Navi(props: Props) {
                   display: { xs: 'none', md: 'flex' },
                 }}
               >
-                {naviList.map((item: any) => (
-                  <Link
-                    sx={{
-                      textDecoration: 'none',
-                      color: 'inherit',
-                    }}
-                    key={item.name}
-                    href={item.link}
-                  >
-                    <Button color="inherit">{item.name}</Button>
-                  </Link>
-                ))}
+                <TabNav />
+
                 {/* {props.children} */}
               </Box>
               <Box sx={{ mr: 3, flexGrow: 0 }}>
@@ -146,7 +123,7 @@ export default function Navi(props: Props) {
             </Toolbar>
           </AppBar>
         </HideOnScroll>
-        <Toolbar className="mb-10" />
+        <Toolbar />
       </>
     </div>
   );

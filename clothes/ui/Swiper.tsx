@@ -21,9 +21,9 @@ export default function Swipers() {
       {/** Slider main container */}
       <Box>
         <Swiper
-          className="rounded-3xl my-10"
+          className="my-10"
           modules={[Mousewheel, FreeMode, Autoplay, Scrollbar, A11y]} // install Swiper modules
-          spaceBetween={30}
+          spaceBetween={40}
           slidesPerView={4}
           scrollbar={{ draggable: true }}
           freeMode={true}

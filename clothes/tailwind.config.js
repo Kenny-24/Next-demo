@@ -25,4 +25,9 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {
+      textColor: ['hover'],
+    },
+  },
 };

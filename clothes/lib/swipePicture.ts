@@ -11,9 +11,3 @@ export const swipePicture: Item[] = [
     {id:6,value:'https://www.louisvuitton.cn/images/is/image/HP_Services_Push_Personalization_DI3.jpg?wid=2048'},
     {id:7,value:'https://www.louisvuitton.cn/images/is/image/HP_Services_Push_Contact_Us_DI3.jpg?wid=2048'}
 ]
-export const naviList = [
-    { name: 'Home', link: '/' },
-    { name: 'View', link: '/kun' },
-    { name: 'Todos', link: '/todos' },
-    { name: 'Search', link: '/search' },
-  ];

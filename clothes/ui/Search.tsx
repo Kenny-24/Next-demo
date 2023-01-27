@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 
 const Search = styled('form')(({ theme }) => ({
   position: 'relative',
-  borderRadius: theme.shape.borderRadius,
+  borderRadius: '20px',
   backgroundColor: alpha(theme.palette.common.white, 0.45),
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.65),
@@ -71,7 +71,7 @@ export default function SearchBtn() {
         onChange={(e: ChangeEvent<HTMLInputElement>) => {
           setSearch(e.target.value);
         }}
-        // onKeyDown={handleSearch} // 每摁一次键盘执行
+        // onKeyDown={handleSearch} // 每摁 下 一次键盘执行
       />
 
       {search && (
