@@ -18,10 +18,12 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
+import { naviList } from '@/lib/swipePicture';
+
 import SearchBtn from './Search';
 interface Props {
   window?: () => Window;
-  children: React.ReactElement;
+  children?: React.ReactElement;
 }
 
 function HideOnScroll(props: Props) {
@@ -85,7 +87,18 @@ export default function Navi(props: Props) {
                   display: { xs: 'none', md: 'flex' },
                 }}
               >
-                {props.children}
+                {naviList.map((item: any) => (
+                  <Link
+                    sx={{
+                      textDecoration: 'none',
+                    }}
+                    key={item.name}
+                    href={item.link}
+                  >
+                    <Button className="text-pink-200">{item.name}</Button>
+                  </Link>
+                ))}
+                {/* {props.children} */}
               </Box>
               <Box sx={{ mr: 3, flexGrow: 0 }}>
                 <SearchBtn />
