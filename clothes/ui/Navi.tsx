@@ -15,7 +15,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
 import SearchBtn from './Search';
-import TabNav from './Tabs';
+import Links from './Links';
 interface Props {
   window?: () => Window;
   children?: React.ReactElement;
@@ -84,7 +84,7 @@ export default function Navi(props: Props) {
                   display: { xs: 'none', md: 'flex' },
                 }}
               >
-                <TabNav />
+                <Links />
 
                 {/* {props.children} */}
               </Box>

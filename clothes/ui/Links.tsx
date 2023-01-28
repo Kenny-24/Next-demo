@@ -13,17 +13,20 @@ export default function Links() {
         },
       }}
     >
-      <Link className="LinkName" href="/">
-        One
+      <Link className="LinkName" href="">
+        Movie
       </Link>
-      <Link className="LinkName" href="/kun">
-        Two
+      <Link className="LinkName" href="/text">
+        Text
       </Link>
       <Link className="LinkName" href="/todos">
-        Three
+        Todo
       </Link>
       <Link className="LinkName" href="/search">
-        Four
+        Search
+      </Link>
+      <Link className="LinkName" href="/chat">
+        Chat
       </Link>
     </Box>
   );
