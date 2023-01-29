@@ -8,6 +8,7 @@ const nextConfig = {
   },
 
   images: {
+    // unoptimized: true,
     domains: ['image.tmdb.org', 'res.gucci.cn', 'www.louisvuitton.cn'],
   },
   // async redirects() {

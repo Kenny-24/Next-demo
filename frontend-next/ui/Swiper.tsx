@@ -11,7 +11,7 @@ import 'swiper/css/scrollbar';
 // import Swiper core and required modules
 import { Autoplay, Mousewheel, Scrollbar, FreeMode, A11y } from 'swiper';
 import { Box } from '@mui/material';
-import { swipePicture } from '@/lib/swipePicture';
+import { swipePicture } from '@/lib/getPicture';
 import Image from 'next/image';
 // install Swiper modules
 
