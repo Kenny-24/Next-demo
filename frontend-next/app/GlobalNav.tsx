@@ -35,8 +35,6 @@ function HideOnScroll(props: Props) {
   );
 }
 
-const settings = ['个人简介', '账户', '主页', '退出'];
-
 export default function GlobalNav(props: Props) {
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null,

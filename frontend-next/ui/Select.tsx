@@ -1,5 +1,6 @@
 'use client';
-import * as React from 'react';
+import React from 'react';
+import { useRouter } from 'next/navigation';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -9,10 +10,10 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 // 问题：useState状态保存
 export default function BasicSelect() {
   const [num, setNum] = React.useState('');
-
+  const router = useRouter();
   const handleChange = (event: SelectChangeEvent) => {
     setNum(event.target.value as string);
-    window.location.href = `/todos/${event.target.value}`;
+    router.push(`/todos/${event.target.value}`);
   };
 
   return (
