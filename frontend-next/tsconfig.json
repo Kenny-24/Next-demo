@@ -18,7 +18,8 @@
     "paths": {
       "@/ui/*": ["ui/*"],
       "@/lib/*": ["lib/*"],
-      "@/styles/*": ["styles/*"]
+      "@/styles/*": ["styles/*"],
+      "@/pages/*": ["pages/*"]
     },
     "plugins": [
       {
@@ -26,6 +27,12 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "lib/prismadb.js"
+  ],
   "exclude": ["node_modules"]
 }

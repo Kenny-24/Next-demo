@@ -3,8 +3,5 @@
 @tailwind utilities;
 /* --swiper-navigation-color: #959595bc;单独设置按钮颜色 */
 /* --swiper-navigation-size: 40px;设置按钮大小 默认是44px */
-.LinkName:hover{
-    color: white;
-    opacity: .8;
-}
+
 

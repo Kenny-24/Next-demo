@@ -16,12 +16,12 @@ const MovieCard: React.FC<Props> = ({
 
   return (
     <div>
-      <h1>{title}</h1>
+      <h1 className="truncate">{title}</h1>
       <h2>{release_date}</h2>
       <Link href={`/${id}`}>
         <Image
           src={imgPath + poster_path}
-          width={400}
+          width={300}
           className=" rounded-3xl"
           quality={100}
           height={400}

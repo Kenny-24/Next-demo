@@ -25,4 +25,7 @@ module.exports = {
       },
     },
   },
+  corePlugins: {
+    preflight: false, // button样式默认透明修复
+  },
 };
