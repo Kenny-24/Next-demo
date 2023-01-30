@@ -1,6 +1,6 @@
-'use client';
-import { SessionProvider } from 'next-auth/react';
-
+import { Session } from 'inspector';
+import type { AppProps } from 'next/app';
+import Auth from './auth';
 export default function RootLayout({
   children,
 }: {
@@ -8,7 +8,8 @@ export default function RootLayout({
 }) {
   return (
     <div>
-      <SessionProvider>{children}</SessionProvider>
+      <Auth />
+      {children}
     </div>
   );
 }

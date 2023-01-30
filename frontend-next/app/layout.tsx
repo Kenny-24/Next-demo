@@ -1,7 +1,9 @@
 // 布局
+'use client';
 import '@/styles/globals.css';
 import React from 'react';
 import GlobalNav from './GlobalNav';
+import { SessionProvider } from 'next-auth/react';
 
 export default function RootLayout({
   children,
@@ -15,7 +17,7 @@ export default function RootLayout({
       </head>
       <body className="overflow-y-scroll bg-zinc-200">
         <GlobalNav />
-        {children}
+        <SessionProvider>{children}</SessionProvider>
       </body>
     </html>
   );

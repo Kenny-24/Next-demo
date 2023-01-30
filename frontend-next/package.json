@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev ",
     "start": "next build && next start",
     "lint": "next lint",
     "format": "prettier --write \"**/*.{js,ts,tsx,md}\""
