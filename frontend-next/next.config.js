@@ -11,6 +11,10 @@ const nextConfig = {
     // unoptimized: true,
     domains: ['image.tmdb.org', 'res.gucci.cn', 'www.louisvuitton.cn'],
   },
+  session: {
+    // Set to jwt in order to CredentialsProvider works properly
+    strategy: 'jwt',
+  },
   // async redirects() {
   //   return [
   //     {
