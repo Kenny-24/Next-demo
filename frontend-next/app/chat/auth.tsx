@@ -13,7 +13,7 @@ export default function Auth() {
     <div className="mt-20">
       <button
         onClick={() => {
-          signIn('google', { callbackUrl });
+          signIn('google');
         }}
       >
         Sign In
