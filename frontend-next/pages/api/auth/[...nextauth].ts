@@ -25,6 +25,9 @@ export default async function auth(req:NextApiRequest, res:NextApiResponse) {
       
     }),
     ],
+    session: {
+      strategy: 'jwt'
+    }
 })}
 // export const authOptions: NextAuthOptions = {
 //   // your configs
